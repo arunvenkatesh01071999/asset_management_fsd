@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h3 Scrap Asset
+
+  form#scrapForm
+    .mb-3
+      label Asset
+      select#scrap_asset.form-select
+
+    .mb-3
+      label Scrap Reason
+      input#scrap_reason.form-control(type="text")
+
+    button.btn.btn-danger(type="submit") Scrap
+
+block scripts
+  script(src="/js/scrap.js")

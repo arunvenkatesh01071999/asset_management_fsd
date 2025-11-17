@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h3.mb-3 Employees
+
+  // Search Box
+  .row.mb-3
+    .col-md-4
+      input#searchInput.form-control(type="text" placeholder="Search employees...")
+
+    .col-md-2
+      button#searchBtn.btn.btn-secondary Search
+
+  button.btn.btn-primary.mb-3#btnAddEmployee Add Employee
+
+  table#employeeTable.table.table-bordered
+    thead
+      tr
+        th ID
+        th Status
+        th First Name
+        th Last Name
+        th Email
+        th Action
+    tbody
+
+  include employee_modal.pug
+
+block scripts
+  script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+  script(src="/js/employees.js")

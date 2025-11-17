@@ -1,0 +1,16 @@
+[
+  {
+    "asset_id": 1,
+    "asset_serial": "SN-1001",
+    "date": "2025-11-01",
+    "event": "purchase",
+    "details": "Purchased from vendor X"
+  },
+  {
+    "asset_id": 2,
+    "asset_serial": "SN-1002",
+    "date": "2025-11-10",
+    "event": "issue",
+    "details": "Issued to employee 1"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "branch": "Chennai",
+    "category": "Laptop",
+    "count": 10,
+    "total_value": 12000
+  },
+  {
+    "branch": "Bangalore",
+    "category": "Phone",
+    "count": 5,
+    "total_value": 1500
+  }
+]

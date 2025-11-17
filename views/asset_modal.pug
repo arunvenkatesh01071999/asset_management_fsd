@@ -1,0 +1,37 @@
+div.modal.fade#assetModal(tabindex="-1")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5.modal-title Asset Form
+        button.btn-close(type="button" data-bs-dismiss="modal")
+
+      .modal-body
+        form#assetForm
+          input#assetId(type="hidden")
+
+          .mb-3
+            label Serial Number
+            input#serial_no.form-control(type="text" required)
+
+          .mb-3
+            label Category
+            select#category_id.form-select
+
+          .mb-3
+            label Make / Model
+            input#make_model.form-control(type="text")
+
+          .mb-3
+            label Status
+            select#status.form-select
+              option(value="in_stock") In Stock
+              option(value="issued") Issued
+              option(value="scrapped") Scrapped
+
+          .mb-3
+            label Assigned To (Employee ID)
+            input#assigned_to.form-control(type="text")
+
+      .modal-footer
+        button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Close
+        button.btn.btn-success#btnSave(type="submit") Save

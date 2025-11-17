@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "serial_number": "SN-1001",
+    "type": "Laptop",
+    "make": "Dell",
+    "model": "Latitude 5420",
+    "status": "in_stock",
+    "value": 1200.0,
+    "branch": "Chennai",
+    "assigned_to": null
+  },
+  {
+    "id": 2,
+    "serial_number": "SN-1002",
+    "type": "Phone",
+    "make": "Samsung",
+    "model": "A52",
+    "status": "issued",
+    "value": 300.0,
+    "branch": "Bangalore",
+    "assigned_to": 1
+  }
+]

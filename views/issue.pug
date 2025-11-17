@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h3 Issue Asset
+
+  form#issueForm
+    .mb-3
+      label Select Asset
+      select#issue_asset.form-select
+
+    .mb-3
+      label Select Employee
+      select#issue_employee.form-select
+
+    .mb-3
+      label Issue Date
+      input#issue_date.form-control(type="date")
+
+    button.btn.btn-success(type="submit") Submit
+
+block scripts
+  script(src="/js/issue.js")

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h3 Asset History
+
+  form#historySearch
+    .input-group.mb-3
+      input#historyInput.form-control(type="text" placeholder="Enter Asset ID or Serial")
+      button.btn.btn-primary Search
+
+  ul.list-group#historyList
+
+block scripts
+  script(src="/js/history.js")

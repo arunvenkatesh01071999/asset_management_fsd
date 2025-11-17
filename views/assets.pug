@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h3.mb-3 Assets
+  button.btn.btn-primary.mb-3#btnAdd Add New Asset
+
+  table#assetsTable.table.table-bordered.table-striped
+    thead
+      tr
+        th ID
+        th Serial No
+        th Category
+        th Make/Model
+        th Status
+        th Assigned To
+        th Actions
+    tbody
+
+  include asset_modal.pug
+
+block scripts
+  script(src="/js/assets.js")

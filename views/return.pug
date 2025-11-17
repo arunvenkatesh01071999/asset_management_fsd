@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h3 Return Asset
+
+  form#returnForm
+    .mb-3
+      label Asset
+      select#return_asset.form-select
+
+    .mb-3
+      label Return Date
+      input#return_date.form-control(type="date")
+
+    .mb-3
+      label Reason
+      input#return_reason.form-control(type="text")
+
+    button.btn.btn-primary(type="submit") Return
+
+block scripts
+  script(src="/js/return.js")

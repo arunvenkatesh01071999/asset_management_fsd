@@ -1,0 +1,39 @@
+//- extends layout
+
+block content
+  // Employee Modal
+  div.modal.fade#employeeModal(tabindex="-1")
+    .modal-dialog
+      .modal-content
+        .modal-header
+          h5.modal-title Employee Form
+          button.btn-close(type="button" data-bs-dismiss="modal")
+
+        .modal-body
+          form#employeeForm
+            input#empId(type="hidden")
+
+            .mb-3
+              label(for="first_name") First Name
+              input#first_name.form-control(type="text" name="first_name")
+
+            .mb-3
+              label(for="last_name") Last Name
+              input#last_name.form-control(type="text" name="last_name")
+
+            .mb-3
+              label(for="email") Email
+              input#email.form-control(type="email" name="email")
+              
+            .mb-3.form-check
+             label.mr-2.form-check-label(for="active") Active  
+             input#active.form-check-input(type="checkbox" name="active")
+
+        .modal-footer
+          button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Close
+          button.btn.btn-success#saveEmp(type="submit" form="employeeForm") Save
+
+//- block scripts
+//-   // Axios must be loaded BEFORE employees.js
+//-   script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+//-   script(src="/js/employees.js")

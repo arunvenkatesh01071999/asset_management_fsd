@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "first_name": "Arun",
+    "last_name": "V",
+    "email": "arun@example.com",
+    "branch": "Chennai"
+  },
+  {
+    "id": 2,
+    "first_name": "Meera",
+    "last_name": "K",
+    "email": "meera@example.com",
+    "branch": "Bangalore"
+  }
+]

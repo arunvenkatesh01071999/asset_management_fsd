@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h3 Stock Summary
+  table#stockTable.table.table-bordered
+    thead
+      tr
+        th Branch
+        th Category
+        th Count
+        th Total Value
+    tbody
+
+block scripts
+  script(src="/js/stock.js")
