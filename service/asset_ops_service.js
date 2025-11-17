@@ -8,48 +8,8 @@ const {
   Branch
 } = require("../models");
 
-
-
-
 const sequelize = require("../config/database");
 
-
-const getStockViewService = async (branchFilter) => {
-  const where = { status: "in_stock" };
-  if (branchFilter) where.branch = branchFilter;
-
-  const grouped = await Asset.findAll({
-    attributes: [
-      "branch",
-      [Sequelize.fn("COUNT", Sequelize.col("id")), "count"],
-      [Sequelize.fn("COALESCE", Sequelize.fn("SUM", Sequelize.col("value")), 0), "total_value"]
-    ],
-    where,
-    group: ["branch"],
-    raw: true
-  });
-
-  const assets = await Asset.findAll({
-    where,
-    attributes: ["id", "serial_number", "make", "model", "type", "value", "branch", "createdAt"],
-    order: [["createdAt", "DESC"]]
-  });
-
-  const overall = await Asset.findOne({
-    attributes: [
-      [Sequelize.fn("COUNT", Sequelize.col("id")), "count"],
-      [Sequelize.fn("COALESCE", Sequelize.fn("SUM", Sequelize.col("value")), 0), "total_value"]
-    ],
-    where,
-    raw: true
-  });
-
-  return {
-    grouped,
-    overall,
-    assets
-  };
-};
 
 
 const issueAssetService = async ({ asset_id, employee_id }) => {
@@ -161,7 +121,6 @@ const assetHistoryService = async (employee_id) => {
 
 
 module.exports = {
-  getStockViewService,
   issueAssetService,
   returnAssetService,
   scrapAssetService,

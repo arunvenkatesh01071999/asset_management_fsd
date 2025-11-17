@@ -1,6 +1,5 @@
 const express = require("express");
 const {
-  getStockViewController,
   issueAssetController,
   returnAssetController,
   scrapAssetController,
@@ -9,7 +8,6 @@ const {
 
 const router = express.Router();
 
-router.get("/stock/view", getStockViewController);
 
 router.post("/issue", issueAssetController);
 

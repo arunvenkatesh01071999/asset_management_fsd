@@ -1,27 +1,10 @@
 const {
-  getStockViewService,
   issueAssetService,
   returnAssetService,
   scrapAssetService,
   assetHistoryService
 } = require("../service/asset_ops_service");
 
-const getStockViewController = async (req, res) => {
-  try {
-    const { branch } = req.query;
-
-    const result = await getStockViewService(branch);
-
-    return res.status(200).json({
-      success: true,
-      message: "Stock view fetched successfully",
-      data: result
-    });
-  } catch (error) {
-    console.error("Stock view error:", error);
-    return res.status(500).json({ success: false, message: "Internal server error" });
-  }
-};
 
 const issueAssetController = async (req, res) => {
   try {
@@ -116,7 +99,6 @@ const assetHistoryController = async (req, res) => {
 };
 
 module.exports = {
-  getStockViewController,
   issueAssetController,
   returnAssetController,
   scrapAssetController,
